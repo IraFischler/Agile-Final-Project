@@ -1,0 +1,99 @@
+﻿<Window x:Class="Checkers.restorGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkers"
+        mc:Ignorable="d"
+        Title="restorGame" Height="1500" Width="750" Background="#FF5A80E6">
+    <StackPanel Height="1135" HorizontalAlignment="Right" Margin="0,85,151,0" Name="gridPanel" VerticalAlignment="Top" Width="550" RenderTransformOrigin="0.5,0.5" >
+        <StackPanel.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform AngleY="0.295"/>
+                <RotateTransform/>
+                <TranslateTransform Y="1.495"/>
+            </TransformGroup>
+        </StackPanel.RenderTransform>
+
+        <Label Foreground="White" FontSize="15" FontWeight="DemiBold" Content="" Height="30" Margin="104,36,25,0" x:Name="statusLabel" VerticalAlignment="Top" HorizontalAlignment="Center" Width="421" RenderTransformOrigin="0.522,-16.194" />
+
+        <Grid x:Name="CheckersGrid" ShowGridLines="True" Width="400" Height="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel x:Name="FirstStackPanel" Background="Black" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Width="125" >
+                <Image x:Name="img_0_00" Source="images/black-piece.png" Width="60" Height="60"  />
+            </StackPanel>
+            <StackPanel x:Name="p2" Background="White" Grid.Row="0" Grid.Column="1">
+            </StackPanel>
+            <StackPanel x:Name="p3" Background="Black" Grid.Row="0" Grid.Column="2">
+                <Image x:Name="img_0_01" Source="images/black-piece.png" Width="60" Height="60" />
+            </StackPanel>
+            <StackPanel x:Name="p4" Background="White" Grid.Row="0" Grid.Column="3"/>
+
+            <StackPanel x:Name="p5" Background="white" Grid.Row="1" Grid.Column="0"/>
+            <StackPanel x:Name="p6" Background="Black" Grid.Row="1" Grid.Column="1" >
+                <Image x:Name="img_0_04" Source="images/black-piece.png" Width="60" Height="60"/>
+            </StackPanel>
+            <StackPanel x:Name="p7" Background="white" Grid.Row="1" Grid.Column="2"/>
+            <StackPanel x:Name="p8" Background="Black" Grid.Row="1" Grid.Column="3">
+                <Image x:Name="img_0_05" Source="images/black-piece.png" Width="60" Height="60"/>
+            </StackPanel>
+
+            <StackPanel x:Name="p9" Background="Black" Grid.Row="2" Grid.Column="0"/>
+            <StackPanel x:Name="p10" Background="White" Grid.Row="2" Grid.Column="1"/>
+            <StackPanel x:Name="p11" Background="Black" Grid.Row="2" Grid.Column="2"/>
+            <StackPanel x:Name="p12" Background="White" Grid.Row="2" Grid.Column="3"/>
+
+            <StackPanel x:Name="p13" Background="white" Grid.Row="3" Grid.Column="0"/>
+            <StackPanel x:Name="p14" Background="Black" Grid.Row="3" Grid.Column="1"/>
+            <StackPanel x:Name="p15" Background="white" Grid.Row="3" Grid.Column="2"/>
+            <StackPanel x:Name="p16" Background="Black" Grid.Row="3" Grid.Column="3"/>
+
+            <StackPanel x:Name="p17" Background="Black" Grid.Row="4" Grid.Column="0"/>
+            <StackPanel x:Name="p18" Background="White" Grid.Row="4" Grid.Column="1"/>
+            <StackPanel x:Name="p19" Background="Black" Grid.Row="4" Grid.Column="2"/>
+            <StackPanel x:Name="p20" Background="White" Grid.Row="4" Grid.Column="3"/>
+
+            <StackPanel x:Name="p21" Background="white" Grid.Row="5" Grid.Column="0"/>
+            <StackPanel x:Name="p22" Background="Black" Grid.Row="5" Grid.Column="1"/>
+            <StackPanel x:Name="p23" Background="white" Grid.Row="5" Grid.Column="2"/>
+            <StackPanel x:Name="p24" Background="Black" Grid.Row="5" Grid.Column="3"/>
+
+            <StackPanel x:Name="p25" Background="Black" Grid.Row="6" Grid.Column="0">
+                <Image x:Name="img_1_07" Source="images\red-piece.png" Width="60" Height="60"/>
+            </StackPanel>
+            <StackPanel x:Name="p26" Background="White" Grid.Row="6" Grid.Column="1"/>
+            <StackPanel x:Name="p27" Background="Black" Grid.Row="6" Grid.Column="2">
+                <Image x:Name="img_1_06" Source="images\red-piece.png" Width="60" Height="60"/>
+            </StackPanel>
+            <StackPanel x:Name="p28" Background="White" Grid.Row="6" Grid.Column="3"/>
+
+            <StackPanel x:Name="p29" Background="white" Grid.Row="7" Grid.Column="0"/>
+            <StackPanel x:Name="p30" Background="Black" Grid.Row="7" Grid.Column="1">
+                <Image x:Name="img_1_03" Source="images\red-piece.png" Width="60" Height="60"/>
+            </StackPanel>
+            <StackPanel x:Name="p31" Background="white" Grid.Row="7" Grid.Column="2"/>
+            <StackPanel x:Name="LastStackPanel"  Background="Black" Grid.Row="7" Grid.Column="3">
+                <Image x:Name="img_1_02" Source="images\red-piece.png" Width="60" Height="60"/>
+            </StackPanel>
+        </Grid>
+
+    </StackPanel>
+</Window>

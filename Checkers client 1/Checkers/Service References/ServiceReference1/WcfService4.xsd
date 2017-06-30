@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService4" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService4" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Game">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Player1" nillable="true" type="tns:Player" />
+      <xs:element minOccurs="0" name="Player2" nillable="true" type="tns:Player" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Team1" nillable="true" type="tns:Team" />
+      <xs:element minOccurs="0" name="Team2" nillable="true" type="tns:Team" />
+      <xs:element minOccurs="0" name="WinnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="WinnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Game" nillable="true" type="tns:Game" />
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeamID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+  <xs:complexType name="Team">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlayersInTeam" nillable="true" type="tns:ArrayOfPlayer" />
+      <xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Team" nillable="true" type="tns:Team" />
+  <xs:complexType name="ArrayOfPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Player" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayer" nillable="true" type="tns:ArrayOfPlayer" />
+  <xs:complexType name="ArrayOfMove">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Move" nillable="true" type="tns:Move" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMove" nillable="true" type="tns:ArrayOfMove" />
+  <xs:complexType name="Move">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GameOfMove" nillable="true" type="tns:Game" />
+      <xs:element minOccurs="0" name="MoveId" type="xs:int" />
+      <xs:element minOccurs="0" name="MoveString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlayerOfMove" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Move" nillable="true" type="tns:Move" />
+  <xs:complexType name="ArrayOfGame">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Game" nillable="true" type="tns:Game" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGame" nillable="true" type="tns:ArrayOfGame" />
+</xs:schema>
