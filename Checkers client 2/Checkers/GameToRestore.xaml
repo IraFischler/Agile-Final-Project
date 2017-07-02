@@ -1,0 +1,16 @@
+﻿<Window x:Class="Checkers.GameToRestore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkers"
+        mc:Ignorable="d"
+        Title="GameToRestore" Height="300" Width="300">
+    <Grid>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="91,103,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="91,70,0,0" TextWrapping="Wrap" Text="Please select a game" VerticalAlignment="Top"/>
+        <TextBlock x:Name="dibagDialog" HorizontalAlignment="Left" Margin="54,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Testing" Content="Delay Testing" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" IsChecked="False" Checked="HandleCheck" Unchecked="HandleUnchecked" />
+
+    </Grid>
+</Window>
